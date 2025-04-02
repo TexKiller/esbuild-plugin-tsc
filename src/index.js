@@ -6,7 +6,7 @@ const stripComments = require('strip-comments');
 const { inspect } = require('util');
 
 const theFinder = new RegExp(
-  /((?<![\(\s]\s*['"])@\w*[\w\d]\s*(?![;])[\((?=\s)])/
+  /((?<![\(\s]\s*['"])@(\()?\w*[\w\d]\s*(?![;])[`\((?=\s)])/
 );
 
 const findDecorators = (fileContent) =>
